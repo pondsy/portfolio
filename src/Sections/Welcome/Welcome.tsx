@@ -4,24 +4,26 @@ import {useEffect, useState} from "react";
 
 const WelcomeSection = () => {
 
-    const [index, setIndex] = useState(0);
-    const [subIndex, setSubIndex] = useState(0);
+    const [wordIndex, setWordIndex] = useState(0);
+    const [letterIndex, setLetterIndex] = useState(0);
     const [blink, setBlink] = useState(true);
     const [reverse, setReverse] = useState(false);
 
     const words = ["Hello there!", "I'm Zsuzsi.", "I develop stuff."];
 
+    useEffect(() => {console.log(wordIndex)}, [wordIndex])
+
     useEffect(() => {
-        if (reverse && index === words.length - 1 && subIndex === 0) {
+        if (reverse && wordIndex === words.length - 1 && letterIndex === 0) {
             /**
              * restarting with words
              */
-            setIndex(0);
+            setWordIndex(0);
             setReverse(false);
             return;
         }
 
-        if (subIndex === words[index].length + 1 && !reverse) {
+        if (letterIndex === words[wordIndex].length + 1 && !reverse) {
             /**
              * deleting typed words
              */
@@ -29,22 +31,21 @@ const WelcomeSection = () => {
             return;
         }
 
-        if (subIndex === 0 && reverse) {
+        if (letterIndex === 0 && reverse) {
             /**
              * typing words
              */
             setReverse(false);
-            setIndex((prev) => prev + 1);
+            setWordIndex((prev) => prev + 1);
             return;
         }
 
         const timeout = setTimeout(() => {
-            setSubIndex((prev) => prev + (reverse ? -1 : 1));
-        }, Math.max(reverse ? 75 : subIndex === words[index].length ? 1000 :
-            150, Math.random() * 350));
+            setLetterIndex((prev) => prev + (reverse ? -1 : 1));
+        }, (letterIndex === words[wordIndex].length) ? 600 : reverse ? 100 : 300);
 
         return () => clearTimeout(timeout);
-    }, [subIndex, index, reverse]);
+    }, [letterIndex, wordIndex, reverse]);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -52,12 +53,11 @@ const WelcomeSection = () => {
         }, 500);
         return () => clearTimeout(timeout);
     }, [blink]);
-
-
+    
     return (
         <section className={sharedStyles.section} id="welcome-section">
             <div className={sharedStyles.title}>
-                {`${words[index].substring(0, subIndex)}`}
+                {`${words[wordIndex].substring(0, letterIndex)}`}
                 {blink ? <span className={styles.blinker}>_</span> : ""}
             </div>
         </section>
