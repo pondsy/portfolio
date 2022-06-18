@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: row;
   background: var(--color-primary);
-  color: var(--color-light-text);
+  color: var(--color-action-text);
   justify-content: space-between;
   gap: 20px;
   font-size: 2em;
@@ -23,7 +23,7 @@
 .active {
   > .underline {
     height: 20px;
-    background: var(--color-secondary);
+    background: var(--color-action);
     margin: -15px -10px 0 10px;
   }
 }
