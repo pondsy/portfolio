@@ -6,18 +6,20 @@ function App() {
 
     const colors = {
         light: {
-            '--color-primary': '#9b9b7a',
-            '--color-secondary': '#d08c60',
-            '--color-action': '#797d62',
-            '--color-light-text': '#FDF4DC',
-            '--color-dark-text': '#4f3130',
+            '--color-primary': '#bbd4ce',
+            '--color-secondary': '#fdebd3',
+            '--color-action': '#f4aea0',
+            '--color-primary-text': '#264e70',
+            '--color-secondary-text': '#679186',
+            '--color-action-text': '#b1706c'
         },
         dark: {
-            '--color-primary': '#4f3130',
-            '--color-secondary': '#FDF4DC',
-            '--color-action': '#797d62',
-            '--color-light-text': '#d08c60',
-            '--color-dark-text': '#9b9b7a',
+            '--color-primary': '#264e70',
+            '--color-secondary': '#679186',
+            '--color-action': '#b1706c',
+            '--color-primary-text': '#bbd4ce',
+            '--color-secondary-text': '#fdebd3',
+            '--color-action-text': '#f4aea0'
         }
     }
 

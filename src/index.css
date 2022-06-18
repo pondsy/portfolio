@@ -38,9 +38,10 @@ body {
 }
 
 :root {
-    --color-primary: #9b9b7a;
-    --color-secondary: #d08c60;
-    --color-action: #797d62;
-    --color-light-text: #FDF4DC;
-    --color-dark-text: #4f3130;
+    --color-primary: #bbd4ce;
+    --color-secondary: #fdebd3;
+    --color-action: #b1706c;
+    --color-primary-text: #264e70;
+    --color-secondary-text: #679186;
+    --color-action-text: #fff;
 }
