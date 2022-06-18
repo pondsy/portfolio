@@ -1,18 +1,16 @@
-import React from 'react';
 import {ContactSection, ProjectsSection, WelcomeSection} from "./Sections";
-import './App.css';
 import Header from "./Components/Header";
+import styles from './App.module.scss';
 
 function App() {
     return (
-        <div className="App">
+        <div className={styles.app}>
             <Header/>
-            <div>
+            <div className={styles.sections}>
                 <WelcomeSection/>
                 <ProjectsSection/>
                 <ContactSection/>
             </div>
-
         </div>
     );
 }

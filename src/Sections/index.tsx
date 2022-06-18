@@ -1,6 +1,6 @@
-import WelcomeSection from "./Welcome/Welcome";
-import ProjectsSection from "./Projects/Projects";
-import ContactSection from "./Contact/Contact";
+import WelcomeSection from "./Welcome";
+import ProjectsSection from "./Projects";
+import ContactSection from "./Contact";
 
 export {
     WelcomeSection,

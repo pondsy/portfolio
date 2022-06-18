@@ -2,10 +2,10 @@ import sharedStyles from '../../Style/sharedStyles.module.scss';
 
 const WelcomeSection = () => {
     return (
-        <div className={sharedStyles.section}>
+        <section className={sharedStyles.section} id="welcome-section">
             <div>Zsuzsa Hudacsko</div>
             <div>Front end web developer</div>
-        </div>
+        </section>
     )
 }
 
