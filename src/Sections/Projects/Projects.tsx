@@ -2,9 +2,9 @@ import sharedStyles from "../../Style/sharedStyles.module.scss";
 
 const ProjectsSection = () => {
     return (
-        <div className={sharedStyles.section}>
+        <section className={sharedStyles.section} id="projects-section">
             Here comes the projects
-        </div>
+        </section>
     )
 }
 

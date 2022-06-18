@@ -1,8 +1,17 @@
-.App {
+.app {
     align-items: center;
     justify-content: center;
     min-height: 100%;
     width: 100%;
     background: var(--color-primary);
     box-sizing: border-box;
+    overflow: scroll;
+}
+
+.sections {
+    position: relative;
+    top: 10vh;
+    overflow: scroll;
+    height: 90vh;
+    scroll-snap-type: y mandatory;
 }

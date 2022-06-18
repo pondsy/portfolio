@@ -1,8 +1,10 @@
 .section {
   box-sizing: border-box;
   padding: 10px;
-  height: 90vh;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
+  height: 100%;
+  scroll-snap-align: start;
+  position: relative;
 }
