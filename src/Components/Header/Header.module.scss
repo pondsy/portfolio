@@ -7,9 +7,23 @@
   display: flex;
   flex-direction: row;
   background: var(--color-primary);
-  color: var(--color-text);
-  justify-content: flex-end;
+  color: var(--color-light-text);
+  justify-content: space-between;
   gap: 20px;
   font-size: 2em;
   padding: 20px;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.active {
+  > .underline {
+    height: 20px;
+    background: var(--color-secondary);
+    margin: -15px -10px 0 10px;
+  }
 }

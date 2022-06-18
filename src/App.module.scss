@@ -6,6 +6,7 @@
     background: var(--color-primary);
     box-sizing: border-box;
     overflow: scroll;
+    transition: background 300ms;
 }
 
 .sections {

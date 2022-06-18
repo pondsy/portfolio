@@ -18,7 +18,6 @@
     url('./resources/fonts/WorkSansBold/WorkSansBold.svg#WorkSansBold') format('svg');
 }
 
-
 html {
     margin: 0;
     height: 100%;
@@ -42,7 +41,6 @@ body {
     --color-primary: #9b9b7a;
     --color-secondary: #d08c60;
     --color-action: #797d62;
-    --color-light: #FDF4DC;
-    --color-dark: #4f3130;
-    --header-height: 50px;
+    --color-light-text: #FDF4DC;
+    --color-dark-text: #4f3130;
 }

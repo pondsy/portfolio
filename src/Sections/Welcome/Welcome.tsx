@@ -1,6 +1,7 @@
 import sharedStyles from '../../Style/sharedStyles.module.scss';
 import styles from './Welcome.module.scss';
 import {useEffect, useState} from "react";
+import CustomVisibilitySensor from "../../Components/VisibilitySensor";
 
 const WelcomeSection = () => {
 
@@ -10,8 +11,6 @@ const WelcomeSection = () => {
     const [reverse, setReverse] = useState(false);
 
     const words = ["Hello there!", "I'm Zsuzsi.", "I develop stuff."];
-
-    useEffect(() => {console.log(wordIndex)}, [wordIndex])
 
     useEffect(() => {
         if (reverse && wordIndex === words.length - 1 && letterIndex === 0) {
@@ -55,12 +54,14 @@ const WelcomeSection = () => {
     }, [blink]);
     
     return (
-        <section className={sharedStyles.section} id="welcome-section">
-            <div className={sharedStyles.title}>
-                {`${words[wordIndex].substring(0, letterIndex)}`}
-                {blink ? <span className={styles.blinker}>_</span> : ""}
-            </div>
-        </section>
+        <CustomVisibilitySensor  elementID={'welcome-section'}>
+            <section className={sharedStyles.section} id="welcome-section">
+                <div className={sharedStyles.title}>
+                    {`${words[wordIndex].substring(0, letterIndex)}`}
+                    {blink ? <span className={styles.blinker}>_</span> : ""}
+                </div>
+            </section>
+        </CustomVisibilitySensor>
     )
 }
 
