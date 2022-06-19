@@ -20,7 +20,7 @@ const AboutSection = () => {
                     <div className={styles.innerSection}>
                         <Photo image={profileImage} alt={'girl with a computer and a cat on her lap'}/>
                         <div className={styles.content}>
-                            {diff && <CustomMotionDiv slideIn className={styles.aboutText}>
+                            {diff && <CustomMotionDiv initialX={-100} className={styles.aboutText}>
                                 {`I'm a front end developer based in the Netherlands (and sometimes in Hungary, France, etc.
                                 I've been developing professionally since 2018 august 
                                 (${diff.years} years, and ${Math.floor(diff.months)} months).

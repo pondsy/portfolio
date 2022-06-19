@@ -1,6 +1,7 @@
 import {AboutSection, ContactSection, ProjectsSection, WelcomeSection} from "./Sections";
 import Header from "./Components/Header";
 import styles from './App.module.scss';
+import ExperienceSection from "./Sections/Experience";
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
             '--color-action': '#f4aea0',
             '--color-primary-text': '#264e70',
             '--color-secondary-text': '#679186',
-            '--color-action-text': '#b1706c'
+            '--color-action-text': '#b1706c',
+            '--color-background': '#fff'
         },
         dark: {
             '--color-primary': '#264e70',
@@ -19,7 +21,8 @@ function App() {
             '--color-action': '#b1706c',
             '--color-primary-text': '#bbd4ce',
             '--color-secondary-text': '#fdebd3',
-            '--color-action-text': '#f4aea0'
+            '--color-action-text': '#f4aea0',
+            '--color-background': '#fff'
         }
     }
 
@@ -40,6 +43,7 @@ function App() {
             <div className={styles.sections}>
                 <WelcomeSection/>
                 <AboutSection/>
+                <ExperienceSection/>
                 <ProjectsSection/>
                 <ContactSection/>
             </div>

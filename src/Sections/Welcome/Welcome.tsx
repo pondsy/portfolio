@@ -62,9 +62,11 @@ const WelcomeSection = () => {
     return (
         <CustomVisibilitySensor  elementID={'welcome-section'}>
             <section className={sharedStyles.section} id="welcome-section">
-                <div className={sharedStyles.title}>
-                    {`${words[wordIndex].substring(0, letterIndex)}`}
-                    {blink ? <span className={styles.blinker}>_</span> : ""}
+                <div className={styles.content}>
+                    <div className={sharedStyles.title}>
+                        {`${words[wordIndex].substring(0, letterIndex)}`}
+                        {blink ? <span className={styles.blinker}>_</span> : ""}
+                    </div>
                 </div>
             </section>
         </CustomVisibilitySensor>

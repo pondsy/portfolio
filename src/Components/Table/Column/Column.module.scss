@@ -1,0 +1,29 @@
+@import "./src/Style/breakpoints.module";
+
+.row {
+  margin: 40px 0;
+}
+
+.text {
+  font-size: 1.2em;
+  display: flex;
+  color: var(--color-secondary-text);
+  cursor: default;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  > ul {
+    list-style-type: none;
+  }
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 20px 0 0;
+  color: var(--color-action-text);
+}
