@@ -68,15 +68,11 @@ const ExperienceSection = () => {
             {
                 name: 'Avans University of Applied Sciences',
                 title: 'Environmental consultant',
-                description: ['Erasmus'],
+                description: ['Erasmus semester'],
                 from: '01/2016',
                 to: '07/2016'
             }
         ]
-    }
-
-    const downloadCV = () => {
-
     }
 
     return (
@@ -88,7 +84,7 @@ const ExperienceSection = () => {
                             <Table title={key} data={value} key={index}/>
                         ))}
                     </div>
-                    <div className={styles.download} onClick={downloadCV}>
+                    <div className={styles.download}>
                         <i className="fa-solid fa-download"/>
                         <a aria-label="CV download" rel="noreferrer" href="https://drive.google.com/file/d/1Bx2VEd4Wifp7_i1Ojoai9i5rgtXOVeYL/view?usp=sharing" target="_blank" download>{` download CV`}</a>
                     </div>
