@@ -15,6 +15,7 @@ const Header = ({setTheme}: HeaderProps) => {
     const navigation = {
         'Hi': 'welcome-section',
         'About me': 'about-section',
+        'Experience': 'experience-section',
         'Projects': 'projects-section',
         'Contact': 'contact-section'
     }

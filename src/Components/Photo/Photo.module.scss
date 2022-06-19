@@ -1,7 +1,7 @@
 @import "./src/Style/breakpoints.module";
 
 .photoWrapper {
-  background: white;
+  background: var(--color-background);
   height: 500px;
   width: 400px;
 
