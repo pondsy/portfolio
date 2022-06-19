@@ -25,10 +25,6 @@ const Header = ({setTheme}: HeaderProps) => {
         element.scrollIntoView({behavior: 'smooth'});
     }
 
-    useLayoutEffect(() => {
-        console.log('activeId', activeId)
-    }, [activeId])
-
     return (
         <div className={styles.header}>
             <ThemeToggle setTheme={setTheme}/>

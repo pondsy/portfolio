@@ -1,15 +1,12 @@
 @import "./src/Style/breakpoints.module";
 
 .verticalScrollSection {
-  overflow: scroll;
   height: 100%;
   width: 100%;
-  scroll-snap-type: x mandatory;
 }
 
 .innerSection {
-  scroll-snap-align: start;
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
   display: flex;
   flex-direction: row;
