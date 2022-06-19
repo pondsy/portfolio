@@ -17,26 +17,23 @@ const AboutSection = () => {
     return (
         <CustomVisibilitySensor elementID={'about-section'}>
             <section className={sharedStyles.section} id="about-section">
-                <div className={styles.innerSection}>
-                    <Photo image={profileImage} alt={'girl with a computer and a cat on her lap'}/>
-                    <CustomMotionDiv className={styles.content}>
-                        {diff && <div className={styles.aboutText}>
-                            {`I'm a front end developer based in the Netherlands (and sometimes in Hungary, France, etc.
+                    <div className={styles.innerSection}>
+                        <Photo image={profileImage} alt={'girl with a computer and a cat on her lap'}/>
+                        <div className={styles.content}>
+                            {diff && <CustomMotionDiv slideIn className={styles.aboutText}>
+                                {`I'm a front end developer based in the Netherlands (and sometimes in Hungary, France, etc.
                                 I've been developing professionally since 2018 august 
                                 (${diff.years} years, and ${Math.floor(diff.months)} months).
                                 I love the challenge of development, seeing design come together with functionality and the detective-work
                                 of finding and fixing issues.`}
-                        </div>}
-                        <div className={styles.links}>
-                            <a href="https://github.com/Panduss" rel="noreferrer" target="_blank"
-                               aria-label="github-link"><i className="fa-brands fa-github-square"/></a>
-                            <a href="https://www.linkedin.com/in/zsuzsa-hudacsko-11b478109/" rel="noreferrer"
-                               target="_blank" aria-label="github-link"><i className="fa-brands fa-linkedin"/></a>
-                            <a href="https://www.last.fm/user/Panduss" rel="noreferrer" target="_blank"
-                               aria-label="github-link"><i className="fa-brands fa-lastfm-square"/></a>
+                            </CustomMotionDiv>}
+                            <div className={styles.links}>
+                                <a href="https://github.com/Panduss" rel="noreferrer" target="_blank" aria-label="github-link"><i className="fa-brands fa-github-square"/></a>
+                                <a href="https://www.linkedin.com/in/zsuzsa-hudacsko-11b478109/" rel="noreferrer" target="_blank" aria-label="github-link"><i className="fa-brands fa-linkedin"/></a>
+                                <a href="https://www.last.fm/user/Panduss" rel="noreferrer" target="_blank" aria-label="github-link"><i className="fa-brands fa-lastfm-square"/></a>
+                            </div>
                         </div>
-                    </CustomMotionDiv>
-                </div>
+                    </div>
             </section>
         </CustomVisibilitySensor>
     )
