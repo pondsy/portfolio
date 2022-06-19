@@ -2,7 +2,6 @@
   height: 10vh;
   position: fixed;
   top: 0;
-  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -12,6 +11,10 @@
   gap: 20px;
   font-size: 2em;
   padding: 20px;
+}
+
+.menuitem {
+  cursor: pointer;
 }
 
 .navBar {

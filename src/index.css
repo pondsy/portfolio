@@ -18,6 +18,10 @@
     url('./resources/fonts/WorkSansBold/WorkSansBold.svg#WorkSansBold') format('svg');
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     margin: 0;
     height: 100%;
