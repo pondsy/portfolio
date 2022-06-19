@@ -12,6 +12,7 @@ root.render(
     <React.StrictMode>
         <ActiveSectionProvider>
             <App/>
+            <div id="menu"/>
         </ActiveSectionProvider>
     </React.StrictMode>
 );

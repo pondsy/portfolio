@@ -1,0 +1,29 @@
+@import "./src/Style/breakpoints.module";
+
+.header {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.overlay {
+  background-color: var(--color-primary);
+  opacity: 0.95;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    display: none !important;
+  }
+}
