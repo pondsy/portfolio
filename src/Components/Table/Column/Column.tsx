@@ -6,8 +6,9 @@ const Column = ({data}: { data: AccordionItemData }) => {
 
     return (
         <div className={styles.row}>
-            <div className={styles.text}><span className={styles.title}>{data.title}</span>{`@ ${data.name}`}</div>
-            <p className={styles.text}>{data.from} {data.to ? `- ${data.to}` : ''}</p>
+            <p className={`${styles.title} ${styles.inline}`}>{data.title}</p>
+            <p className={`${styles.text} ${styles.inline}`}>{`@ ${data.name}`}</p>
+            <p className={styles.text}>{data.from} - {data.to ? ` ${data.to}` : 'present'}</p>
             {data.description && <p className={`${styles.text} ${styles.list}`}>{data.description.map((item => (
                 <ul>
                     <li>{item}</li>

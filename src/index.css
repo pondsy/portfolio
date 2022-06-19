@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'WorkSansRegular';
+    font-family: 'WorkSans';
     font-weight: 200;
     src: url('./resources/fonts/WorkSansRegular/WorkSansRegular.eot');
     src: url('./resources/fonts/WorkSansRegular/WorkSansRegular.eot') format('embedded-opentype'),
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'WorkSansBold';
+    font-family: 'WorkSans';
     font-weight: 400;
     src: url('./resources/fonts/WorkSansBold/WorkSansBold.eot');
     src: url('./resources/fonts/WorkSansBold/WorkSansBold.eot') format('embedded-opentype'),
