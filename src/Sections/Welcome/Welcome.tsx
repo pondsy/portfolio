@@ -2,8 +2,11 @@ import sharedStyles from '../../Style/sharedStyles.module.scss';
 import styles from './Welcome.module.scss';
 import {useEffect, useState} from "react";
 import CustomVisibilitySensor from "../../Components/VisibilitySensor";
+import {useActiveSections} from "../../Hooks/useActiveSection";
 
 const WelcomeSection = () => {
+
+    const {activeId} = useActiveSections();
 
     const [wordIndex, setWordIndex] = useState(0);
     const [letterIndex, setLetterIndex] = useState(0);
@@ -13,6 +16,7 @@ const WelcomeSection = () => {
     const words = ["Hello there!", "I'm Zsuzsi.", "I develop stuff."];
 
     useEffect(() => {
+
         if (reverse && wordIndex === words.length - 1 && letterIndex === 0) {
             /**
              * restarting with words
@@ -47,9 +51,11 @@ const WelcomeSection = () => {
     }, [letterIndex, wordIndex, reverse]);
 
     useEffect(() => {
+        if (activeId !== 'welcome-section') return () => clearTimeout(timeout);
         const timeout = setTimeout(() => {
             setBlink((prev) => !prev);
-        }, 500);
+        }, 1000);
+
         return () => clearTimeout(timeout);
     }, [blink]);
     

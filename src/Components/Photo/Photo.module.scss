@@ -1,0 +1,19 @@
+@import "./src/Style/breakpoints.module";
+
+.photoWrapper {
+  background: white;
+  height: 500px;
+  width: 400px;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    height: 350px;
+    width: 250px;
+  }
+}
+
+.image {
+  object-fit: cover;
+  padding: 5% 5% 20%;
+  height: 100%;
+  width: 100%;
+}

@@ -1,6 +1,5 @@
 .section {
-  box-sizing: border-box;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -10,6 +9,7 @@
 }
 
 .title {
+  cursor: default;
   font-size: 4em;
   color: var(--color-primary-text);
 }
