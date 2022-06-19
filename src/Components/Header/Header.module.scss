@@ -1,3 +1,5 @@
+@import "./src/Style/breakpoints.module";
+
 .header {
   height: 10vh;
   position: fixed;
@@ -8,19 +10,24 @@
   background: var(--color-primary);
   color: var(--color-action-text);
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   font-size: 2em;
   padding: 20px;
 }
 
-.menuitem {
-  cursor: pointer;
-}
-
-.navBar {
+.menu {
   display: flex;
   flex-direction: row;
   gap: 20px;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
+}
+
+.menuItem {
+  cursor: pointer;
 }
 
 .active {
@@ -29,4 +36,27 @@
     background: var(--color-action);
     margin: -15px -10px 0 10px;
   }
+}
+
+.hamburgerItem {
+  width: 2rem;
+  height: 2rem;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+  display: none;
+    @media only screen and (max-width: $breakpoint-medium) {
+    display: inline;
+      padding: 10px 10px 0 0;
+      z-index: 10;
+  }
+}
+
+.item {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  background-color: var(--color-action-text);
+  transform-origin: 1px;
+  transition: all 0.3s linear;
 }
