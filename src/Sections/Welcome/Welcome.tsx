@@ -15,13 +15,11 @@ const WelcomeSection = () => {
     }, [typed])
 
     useEffect(() => {
-
         const timeout = setTimeout(() => {
             setTyped((prev) => prev + 1)
-        }, 500)
+        }, (display.endsWith('!') || display.endsWith('.')) ? 2000 : 500)
 
         if (typed === words[0].length) return () => clearTimeout(timeout);
-
     }, [display])
 
     useEffect(() => {

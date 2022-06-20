@@ -9,12 +9,12 @@ const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
-    // <React>
+    <React.StrictMode>
         <ActiveSectionProvider>
             <App/>
             <div id="menu"/>
         </ActiveSectionProvider>
-    // </React>
+    </React.StrictMode>
 );
 
 reportWebVitals();
