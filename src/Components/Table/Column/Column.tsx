@@ -9,11 +9,12 @@ const Column = ({data}: { data: AccordionItemData }) => {
             <p className={`${styles.title} ${styles.inline}`}>{data.title}</p>
             <p className={`${styles.text} ${styles.inline}`}>{`@ ${data.name}`}</p>
             <p className={styles.text}>{data.from} - {data.to ? ` ${data.to}` : 'present'}</p>
-            {data.description && <p className={`${styles.text} ${styles.list}`}>{data.description.map((item => (
-                <ul>
-                    <li>{item}</li>
+            <ul>
+                {data.description && <p className={`${styles.text} ${styles.list}`}>
+                    {data.description.map(item => (<li key={item}>{item}</li>))}
+                </p>
+                }
                 </ul>
-            )))} </p>}
         </div>
     );
 };

@@ -1,60 +1,31 @@
 import sharedStyles from '../../Style/sharedStyles.module.scss';
 import styles from './Welcome.module.scss';
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import CustomVisibilitySensor from "../../Components/VisibilitySensor";
-import {useActiveSections} from "../../Hooks/useActiveSection";
 
 const WelcomeSection = () => {
 
-    const {activeId} = useActiveSections();
+    const words = 'Hello there!\nI\'m Zsuzsi.\nI develop stuff.';
 
-    const [wordIndex, setWordIndex] = useState(0);
-    const [letterIndex, setLetterIndex] = useState(0);
     const [blink, setBlink] = useState(true);
-    const [reverse, setReverse] = useState(false);
+    const [typed, setTyped] = useState<number>(0);
 
-    const words = ["Hello there!", "I'm Zsuzsi.", "I develop stuff."];
+    const display = useMemo(() => {
+        return words.substring(0, typed);
+    }, [typed])
 
     useEffect(() => {
-
-        if (reverse && wordIndex === words.length - 1 && letterIndex === 0) {
-            /**
-             * restarting with words
-             */
-            setWordIndex(0);
-            setReverse(false);
-            return;
-        }
-
-        if (letterIndex === words[wordIndex].length + 1 && !reverse) {
-            /**
-             * deleting typed words
-             */
-            setReverse(true);
-            return;
-        }
-
-        if (letterIndex === 0 && reverse) {
-            /**
-             * typing words
-             */
-            setReverse(false);
-            setWordIndex((prev) => prev + 1);
-            return;
-        }
-
         const timeout = setTimeout(() => {
-            setLetterIndex((prev) => prev + (reverse ? -1 : 1));
-        }, (letterIndex === words[wordIndex].length) ? 600 : reverse ? 100 : 300);
+            setTyped((prev) => prev + 1)
+        }, (display.endsWith('!') || display.endsWith('.')) ? 2000 : 500)
 
-        return () => clearTimeout(timeout);
-    }, [letterIndex, wordIndex, reverse]);
+        if (typed === words[0].length) return () => clearTimeout(timeout);
+    }, [display])
 
     useEffect(() => {
-        if (activeId !== 'welcome-section') return () => clearTimeout(timeout);
         const timeout = setTimeout(() => {
             setBlink((prev) => !prev);
-        }, 1000);
+        }, 600);
 
         return () => clearTimeout(timeout);
     }, [blink]);
@@ -64,7 +35,7 @@ const WelcomeSection = () => {
             <section className={sharedStyles.section} id="welcome-section">
                 <div className={styles.content}>
                     <div className={sharedStyles.title}>
-                        {`${words[wordIndex].substring(0, letterIndex)}`}
+                        {`${display}`}
                         {blink ? <span className={styles.blinker}>_</span> : ""}
                     </div>
                 </div>

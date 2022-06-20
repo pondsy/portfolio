@@ -28,7 +28,7 @@ html {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: 'WorkSansRegular', sans-serif;
+    font-family: 'WorkSans', sans-serif;
     background-color: var(--color-primary);
 }
 

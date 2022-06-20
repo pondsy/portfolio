@@ -1,8 +1,9 @@
+@import "./src/Style/breakpoints.module";
+
 .section {
   padding: 20px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   min-height: 100%;
   position: relative;
 }
@@ -11,4 +12,9 @@
   cursor: default;
   font-size: 4em;
   color: var(--color-primary-text);
+  white-space: pre-wrap;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    font-size: 3em;
+  }
 }

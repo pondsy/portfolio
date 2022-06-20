@@ -1,9 +1,26 @@
+@import "./src/Style/breakpoints.module";
+
 .blinker {
   color: var(--color-action);
 }
 
 .content {
-  display: flex;
-  align-items: center;
   padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 100%;
+  margin-top: 400px;
+  position: relative;
+
+  @media only screen and (min-width: calc(#{$breakpoint-1080p} + 1px)) {
+    margin-top: 40%;
+  }
+
+  @media only screen and (max-width: $breakpoint-large) {
+    margin-top: 300px;
+  }
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    margin-top: 200px;
+  }
 }
