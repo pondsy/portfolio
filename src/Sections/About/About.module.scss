@@ -30,6 +30,10 @@
   text-align: justify;
   cursor: default;
   color: var(--color-secondary-text);
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    font-size: 1.3em;
+  }
 }
 
 .links {

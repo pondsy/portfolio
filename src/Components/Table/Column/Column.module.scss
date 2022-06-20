@@ -23,6 +23,10 @@
   font-weight: bold;
   padding: 0 10px 0 0;
   color: var(--color-action-text);
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    font-size: 1.3em;
+  }
 }
 
 .inline {
