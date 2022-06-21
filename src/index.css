@@ -1,23 +1,28 @@
 @font-face {
-    font-family: 'WorkSans';
-    font-weight: 200;
-    src: url('./resources/fonts/WorkSansRegular/WorkSansRegular.eot');
-    src: url('./resources/fonts/WorkSansRegular/WorkSansRegular.eot') format('embedded-opentype'),
-    url('./resources/fonts/WorkSansRegular/WorkSansRegular.woff2') format('woff2'),
-    url('./resources/fonts/WorkSansRegular/WorkSansRegular.woff') format('woff'),
-    url('./resources/fonts/WorkSansRegular/WorkSansRegular.ttf') format('truetype'),
-    url('./resources/fonts/WorkSansRegular/WorkSansRegular.svg#WorkSansRegular') format('svg');
+    font-family: 'Raleway';
+    src: url('./resources/fonts/Raleway/Raleway-Bold.woff2') format('woff2'),
+        url('./resources/fonts/Raleway/Raleway-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'WorkSans';
-    font-weight: 400;
-    src: url('./resources/fonts/WorkSansBold/WorkSansBold.eot');
-    src: url('./resources/fonts/WorkSansBold/WorkSansBold.eot') format('embedded-opentype'),
-    url('./resources/fonts/WorkSansBold/WorkSansBold.woff2') format('woff2'),
-    url('./resources/fonts/WorkSansBold/WorkSansBold.woff') format('woff'),
-    url('./resources/fonts/WorkSansBold/WorkSansBold.ttf') format('truetype'),
-    url('./resources/fonts/WorkSansBold/WorkSansBold.svg#WorkSansBold') format('svg');
+    font-family: 'Raleway';
+    src: url('./resources/fonts/Raleway/Raleway-Light.woff2') format('woff2'),
+        url('./resources/fonts/Raleway/Raleway-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./resources/fonts/Raleway/Raleway-Regular.woff2') format('woff2'),
+        url('./resources/fonts/Raleway/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -28,7 +33,7 @@ html {
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: 'WorkSans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: var(--color-primary);
 }
 
