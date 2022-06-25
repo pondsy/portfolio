@@ -1,15 +1,14 @@
 import sharedStyles from "../../Style/sharedStyles.module.scss";
-import CustomVisibilitySensor from "../../Components/VisibilitySensor";
+import React, {ForwardedRef} from "react";
+import ComingSoon from "../../Components/ComingSoon";
 
-const ProjectsSection = () => {
+const ProjectsSection = React.forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
 
     return (
-        <CustomVisibilitySensor  elementID={'projects-section'}>
-            <section className={sharedStyles.section} id="projects-section">
-                Here comes the projects
-            </section>
-        </CustomVisibilitySensor>
+        <div ref={ref} className={sharedStyles.section}>
+            <ComingSoon project={'Projects'}/>
+        </div>
     )
-}
+})
 
 export default ProjectsSection;

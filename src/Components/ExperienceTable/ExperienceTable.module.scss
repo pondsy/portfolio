@@ -20,11 +20,11 @@
 }
 
 .title {
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--color-secondary-text);
   margin: 0 0 20px;
 
   @media only screen and (max-width: $breakpoint-medium) {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }

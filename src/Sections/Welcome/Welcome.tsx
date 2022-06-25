@@ -1,11 +1,9 @@
 import sharedStyles from '../../Style/sharedStyles.module.scss';
 import styles from './Welcome.module.scss';
-import {useEffect, useMemo, useState} from "react";
-import CustomVisibilitySensor from "../../Components/VisibilitySensor";
+import React, {ForwardedRef, useEffect, useMemo, useState} from "react";
+import {words} from "../../Utils/data";
 
-const WelcomeSection = () => {
-
-    const words = 'Hello there!\nI\'m Zsuzsi.\nI develop stuff.';
+const WelcomeSection = React.forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
 
     const [blink, setBlink] = useState(true);
     const [typed, setTyped] = useState<number>(0);
@@ -29,19 +27,17 @@ const WelcomeSection = () => {
 
         return () => clearTimeout(timeout);
     }, [blink]);
-    
+
     return (
-        <CustomVisibilitySensor  elementID={'welcome-section'}>
-            <section className={sharedStyles.section} id="welcome-section">
-                <div className={styles.content}>
-                    <div className={sharedStyles.title}>
-                        {`${display}`}
-                        {blink ? <span className={styles.blinker}>_</span> : ""}
-                    </div>
+        <div className={sharedStyles.section} ref={ref}>
+            <div className={styles.content}>
+                <div className={sharedStyles.title}>
+                    {`${display}`}
+                    {blink ? <span className={styles.blinker}>_</span> : ""}
                 </div>
-            </section>
-        </CustomVisibilitySensor>
+            </div>
+        </div>
     )
-}
+})
 
 export default WelcomeSection;
