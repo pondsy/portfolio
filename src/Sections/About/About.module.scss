@@ -1,14 +1,12 @@
 @import "./src/Style/breakpoints.module";
 
 .innerSection {
-  width: 100%;
-  min-height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   gap: 50px;
-  padding: 20px;
+
   @media only screen and (max-width: $breakpoint-medium) {
     flex-direction: column;
   }

@@ -8,7 +8,7 @@ import {experience} from "../../Utils/data";
 const ExperienceSection = React.forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
 
     return (
-        <div ref={ref} className={sharedStyles.section}>
+        <div ref={ref} className={sharedStyles.section} id="experience-section">
             <CustomMotionDiv className={styles.container}>
                 <div className={styles.experiences}>
                     {Object.entries(experience).map(([key, value], index) => (

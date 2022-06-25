@@ -5,7 +5,8 @@
     width: 100%;
     background: var(--color-primary);
     transition: background 300ms;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .sections {
