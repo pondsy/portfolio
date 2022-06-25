@@ -29,7 +29,7 @@ const WelcomeSection = React.forwardRef((props, ref: ForwardedRef<HTMLDivElement
     }, [blink]);
 
     return (
-        <div className={sharedStyles.section} ref={ref} id="welcome-section">
+        <div ref={ref} className={sharedStyles.section} id="welcome-section">
             <div className={styles.content}>
                 <div className={sharedStyles.title}>
                     {`${display}`}

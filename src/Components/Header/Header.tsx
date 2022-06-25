@@ -24,6 +24,7 @@ const Header = ({setTheme, activeIndex}: HeaderProps) => {
     const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
 
     const scrollIntoView = (elementId: string) => {
+        console.log('elementId', elementId);
         if (hamburgerIsOpen) setHamburgerIsOpen(false);
         const element = document.getElementById(elementId);
         if (!element) return;
