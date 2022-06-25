@@ -38,7 +38,7 @@ function App() {
         }
         setY(scrollPosition);
 
-        positions.map((position, index) => {
+        positions.forEach((position, index) => {
             if (scrollingDown && scrollPosition > position) {
                 setActiveIndex(index+1)
             } else if (!scrollingDown && scrollPosition+offsetHeight > position) {
