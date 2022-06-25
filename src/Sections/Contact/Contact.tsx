@@ -1,14 +1,13 @@
 import sharedStyles from "../../Style/sharedStyles.module.scss";
-import CustomVisibilitySensor from "../../Components/VisibilitySensor";
+import React, {ForwardedRef} from "react";
+import ComingSoon from "../../Components/ComingSoon";
 
-const ContactSection = () => {
+const ContactSection = React.forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
     return (
-        <CustomVisibilitySensor  elementID={'contact-section'}>
-            <section className={sharedStyles.section} id="contact-section">
-                Here comes the contact
-            </section>
-        </CustomVisibilitySensor>
+        <div ref={ref} className={sharedStyles.section}>
+            <ComingSoon project={'Contact'}/>
+        </div>
     )
-}
+})
 
 export default ContactSection;

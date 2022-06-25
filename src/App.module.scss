@@ -4,14 +4,12 @@
     min-height: 100%;
     width: 100%;
     background: var(--color-primary);
-    overflow: scroll;
     transition: background 300ms;
+    overflow: scroll;
 }
 
 .sections {
-    margin: -10vh 0 0;
     position: relative;
     top: 10vh;
-    overflow: scroll;
-    height: 100vh;
+    height: 90vh;
 }
