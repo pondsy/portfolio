@@ -7,18 +7,5 @@
 .content {
   display: flex;
   justify-content: flex-start;
-  margin-top: 400px;
   position: relative;
-
-  @media only screen and (min-width: calc(#{$breakpoint-1080p} + 1px)) {
-    margin-top: 500px
-  }
-
-  @media only screen and (max-width: $breakpoint-large) {
-    margin-top: 300px;
-  }
-
-  @media only screen and (max-width: $breakpoint-medium) {
-    margin-top: 200px;
-  }
 }
