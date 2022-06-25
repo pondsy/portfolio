@@ -4,7 +4,7 @@ import ComingSoon from "../../Components/ComingSoon";
 
 const ContactSection = React.forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
     return (
-        <div ref={ref} className={sharedStyles.section}>
+        <div ref={ref} className={sharedStyles.section} id="contact-section">
             <ComingSoon project={'Contact'}/>
         </div>
     )

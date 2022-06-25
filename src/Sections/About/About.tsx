@@ -14,7 +14,7 @@ const AboutSection = React.forwardRef((props, ref: ForwardedRef<HTMLDivElement>)
     }, [])
 
     return (
-        <div ref={ref} className={sharedStyles.section}>
+        <div ref={ref} className={sharedStyles.section} id="about-section">
             <div className={styles.innerSection}>
                 <Photo image={profileImage} alt={'girl with a computer and a cat on her lap'}/>
                 <div className={styles.content}>
